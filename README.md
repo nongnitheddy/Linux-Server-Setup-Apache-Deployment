@@ -3,3 +3,5 @@ In setting up a Linux server on which Apache is deployed, a server which is acce
 
 An amazon Linux server with the following configuration was create; Amazon Linux was used and the AMI, instance type was set to the basic t2.micro, a keypair was created to enable secured connection and a security group for restrictions and security. In other to grant remote access and manage configurations on the Linux server, SSH (on port 22) was allowed. To access Apache from browser, HTTP (on port 80) was allowed.
 <img width="613" height="350" alt="Apache Server" src="https://github.com/user-attachments/assets/fcff2188-1bc4-4ed5-905f-0483fb068d3c" />
+Create and attach an internet gate way to the VPC allowing traffic to browsers. Create route tout table linking internet gate way and public subnet. Connect to server though SSH while applying restricted assess using the command “chmod 400 "key.pem". then connect to the server through “ssh -i "key.pem" ec2-user@54.163.22.219”
+<img width="456" height="263" alt="image" src="https://github.com/user-attachments/assets/8be4251e-f862-427a-b010-dc7ba2178706" />
