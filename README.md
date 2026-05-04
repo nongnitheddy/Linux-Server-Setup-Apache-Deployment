@@ -7,7 +7,7 @@ An amazon Linux server with the following configuration was create; Amazon Linux
 **Phase 2: SSH into server.** Create and attach an internet gate way to the VPC allowing traffic to browsers. Create route tout table linking internet gate way and public subnet. Connect to server though SSH while applying restricted assess using the command “chmod 400 "key.pem". then connect to the server through “ssh -i "key.pem" ec2-user@54.163.22.219”
 <img width="456" height="263" alt="image" src="https://github.com/user-attachments/assets/8be4251e-f862-427a-b010-dc7ba2178706" />
 
-**Phase 3: Install apache.** To install apache, it is neccessary to undate the system so to avoid any installation conflict. Run sudo yum update -y to update the system then sudo yum intall httpd -y to install apache.
+**Phase 3: Install apache.** To install apache, it is neccessary to undate the system so to avoid any installation conflict. Run sudo yum update -y to update the system then sudo yum intall httpd -y to install apache httpd server.
 <img width="718" height="616" alt="installing apache 1" src="https://github.com/user-attachments/assets/8a1eb387-d2c5-433b-9208-8de8042851c8" />
 <img width="720" height="372" alt="installing apache 2" src="https://github.com/user-attachments/assets/72c491f9-e5f9-4610-88d6-c942bcb2ed44" />
 
