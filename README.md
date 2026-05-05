@@ -10,11 +10,12 @@ An amazon Linux server with the following configuration was create; Amazon Linux
 **Phase 3: Install apache.** To install apache, it is neccessary to undate the system so to avoid any installation conflict. Run "sudo yum update -y" to update the system then "sudo yum intall httpd -y" to install apache httpd server. 
 <img width="718" height="616" alt="installing apache 1" src="https://github.com/user-attachments/assets/8a1eb387-d2c5-433b-9208-8de8042851c8" />
 <img width="720" height="372" alt="installing apache 2" src="https://github.com/user-attachments/assets/72c491f9-e5f9-4610-88d6-c942bcb2ed44" />
-After installing Apache, I started and enabled the service to ensure availability across reboots.
+
+After installing Apache, I started "sudo systemcl start httpd" and enabled the service "sudo systemctl enable httpd" to ensure availability across reboots.
 Then run "sudo systemctl status httpd" to confirm that apache is active. Then copy ec2 ip and paste in you broswer to confirm that apache listens to port 80.
 <img width="721" height="408" alt="apache status check" src="https://github.com/user-attachments/assets/6b1e19d7-7f2f-45cf-9617-2fd5218efbe5" />
 
-Create an index.html page within the file system configuration. Run "touch index.html" to create a file into which the index.html page file will be set up withing the system directory
+Create an index.html page within Apache’s root directory. Run "touch index.html" to create a file into which the index.html page file will be set up withing the system directory
 <img width="1281" height="904" alt="index html" src="https://github.com/user-attachments/assets/e36d740b-eff7-4833-8bdf-f52ccd1ac6f9" />
 
 Apache runs as a different user than the file owner, so it needs read access under the ‘others’ category. Setting permissions to 644 ensures the owner can modify the file while Apache can safely read and serve it without exposing write permissions, which maintains security.
