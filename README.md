@@ -14,3 +14,18 @@ After installing Apache, I started and enabled the service to ensure availabilit
 Then run "sudo systemctl status httpd" to confirm that apache is active. Then copy ec2 ip and paste in you broswer to confirm that apache listens to port 80.
 <img width="721" height="408" alt="apache status check" src="https://github.com/user-attachments/assets/6b1e19d7-7f2f-45cf-9617-2fd5218efbe5" />
 
+Create an index.html page within the file system configuration. Run "touch index.html" to create a file into which the index.html page file will be set up withing the system directory
+<img width="1281" height="904" alt="index html" src="https://github.com/user-attachments/assets/e36d740b-eff7-4833-8bdf-f52ccd1ac6f9" />
+
+Apache runs as a different user than the file owner, so it needs read access under the ‘others’ category. Setting permissions to 644 ensures the owner can modify the file while Apache can safely read and serve it without exposing write permissions, which maintains security.
+<img width="880" height="526" alt="granting permisson for index html" src="https://github.com/user-attachments/assets/75ab3d1c-8b5f-45ef-a82c-6ea8e75449c7" />
+
+Grant "755" permission to the directory allowing access for Apache to read files inside the directory /var/www/html/index.html
+<img width="954" height="252" alt="granting directory permission" src="https://github.com/user-attachments/assets/f364fa27-f735-44d4-87ae-2fff982484e8" />
+
+Restart apache http server and reload the website to view the changes displayed in the index.html file
+<img width="1914" height="886" alt="launchin website" src="https://github.com/user-attachments/assets/af27c9ca-990b-47e2-90ef-df3fcb0247d0" />
+
+
+
+
