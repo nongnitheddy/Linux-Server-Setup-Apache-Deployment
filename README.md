@@ -1,3 +1,4 @@
+# Install and deploy Apache on EC2 using Linux
 ## Phase 1: Creating EC2 instance
 In setting up a Linux server on which Apache is deployed, a server which is accessible over the internet, scalable and always available is needed. An amazon EC2 instance was created and hosted within the public subnet in the VPC (prod-web-vpc) as a cloud-based Linux server
 <img width="614" height="353" alt="creating my environment(VPC)" src="https://github.com/user-attachments/assets/491c2ff0-d981-4e47-8b5c-c5445a3322f1" />
